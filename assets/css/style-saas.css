@@ -1,0 +1,230 @@
+/* ------------------------------------------------------ */
+/*     SaaS Startup - Estilo moderno y vibrante           */
+/*     Totalmente compatible con Bootstrap 5              */
+/* ------------------------------------------------------ */
+
+:root {
+    /* Paleta SaaS Startup con degradados */
+    --primary-start: #6366F1;   /* Indigo */
+    --primary-end: #8B5CF6;     /* Purple */
+    --primary-solid: #6D5DFc;
+
+    --accent-teal: #2DD4BF;
+    --accent-pink: #EC4899;
+
+    --gray-100: #F4F4F7;
+    --gray-300: #D6D7DC;
+    --gray-600: #6B7280;
+    --gray-900: #111827;
+
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* BODY + TIPOGRAFÍA */
+body {
+    background: var(--gray-100);
+    font-family: 'Inter', sans-serif;
+    color: var(--gray-900);
+    line-height: 1.6;
+}
+
+/* TITULARES */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* ------------------------------------------------------ */
+/* NAVBAR MODERNO                                          */
+/* ------------------------------------------------------ */
+
+.navbar-saas {
+    background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+    padding: 16px;
+}
+
+.navbar-saas .navbar-brand,
+.navbar-saas .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar-saas .nav-link:hover {
+    opacity: 0.85;
+}
+
+/* ------------------------------------------------------ */
+/* CARDS — SaaS estilo suave con sombras difusas           */
+/* ------------------------------------------------------ */
+
+.card-saas {
+    background: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+.card-saas:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.card-saas img {
+    border-radius: var(--radius-md);
+    background: var(--gray-300);
+}
+
+/* ------------------------------------------------------ */
+/* BOTONES SAAS (Degradados y suaves)                      */
+/* ------------------------------------------------------ */
+
+.btn-saas {
+    border: none;
+    padding: 12px 26px;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    color: white;
+    background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+    transition: 0.2s;
+}
+
+.btn-saas:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Variante verde/teal */
+.btn-saas-teal {
+    background: var(--accent-teal);
+    color: #064E3B;
+}
+
+.btn-saas-teal:hover {
+    opacity: 0.85;
+}
+
+/* Botón outline */
+.btn-saas-outline {
+    background: none;
+    border: 2px solid var(--primary-start);
+    color: var(--primary-start);
+    padding: 10px 24px;
+    border-radius: var(--radius-md);
+}
+
+.btn-saas-outline:hover {
+    background: var(--primary-start);
+    color: white;
+}
+
+/* ------------------------------------------------------ */
+/* FORMULARIOS                                             */
+/* ------------------------------------------------------ */
+
+.form-control-saas {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    background: white;
+    transition: 0.2s;
+}
+
+.form-control-saas:focus {
+    border-color: var(--primary-start);
+    box-shadow: 0 0 0 4px rgba(99,102,241,0.15);
+}
+
+/* ------------------------------------------------------ */
+/* SECCIONES / BLOQUES                                     */
+/* ------------------------------------------------------ */
+
+.section-saas {
+    padding: 50px 0;
+}
+
+.section-header-saas {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ------------------------------------------------------ */
+/* PLACEHOLDER DE IMÁGENES                                 */
+/* ------------------------------------------------------ */
+
+.img-placeholder-saas {
+    width: 100%;
+    height: 200px;
+    background: var(--gray-300);
+    border-radius: var(--radius-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray-600);
+    font-weight: 600;
+}
+
+/* ------------------------------------------------------ */
+/* LISTAS / TABLAS                                          */
+/* ------------------------------------------------------ */
+
+.table-saas {
+    background: white;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.table-saas th {
+    background: var(--gray-900);
+    color: white;
+    padding: 14px;
+    border: none;
+}
+
+.table-saas td {
+    padding: 14px;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--gray-300);
+}
+
+/* ------------------------------------------------------ */
+/* ICONOS BOOTSTRAP                                         */
+/* ------------------------------------------------------ */
+
+.icon-saas {
+    padding: 10px;
+    border-radius: var(--radius-md);
+    background: var(--gray-100);
+    color: var(--primary-start);
+    transition: 0.2s;
+}
+
+.icon-saas:hover {
+    background: var(--primary-start);
+    color: white;
+}
+
+/* ------------------------------------------------------ */
+/* ANIMACIÓN SUAVE SaaS                                     */
+/* ------------------------------------------------------ */
+
+.fade-up {
+    animation: fadeUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,634 @@
+:root {
+    /* Colores institucionales (reemplazar si es necesario) */
+    --GTOazulMarino: #000F9F;
+    --GTOazulMedio: #0066FF;
+    --GTOdocumentos: #C8C8AA;
+    --GTOeduCalidad: #B9C8E6;
+    --GTOheadFoot: #E4ECFA;
+
+    /* Tipografía y escala */
+    --ff-sans: "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --base-size: 16px;
+    /* ajustar según diseño */
+    --container-max: 1100px;
+
+    /* Neutros */
+    --color-texto: #1a1a1a;
+    --color-blanco: #ffffff;
+    --muted: #6b7785;
+
+    --radius: 12px;
+    --focus-ring: 3px;
+}
+
+.logo-navbar {
+    height: 45px;
+}
+
+.navbar {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+/* En móviles aún más pequeño */
+@media (max-width: 768px) {
+    .navbar-logo {
+        max-height: 32px;
+    }
+}
+
+.hero-sias {
+    position: relative;
+    min-height: 45px; /*45px;*/
+    /* SUPER ALTO */
+    padding: 10px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Máscara oscura */
+.hero-sias .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+/* Contenido visible arriba */
+.hero-sias .container {
+    z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-sias {
+        min-height: 45px;
+        padding: 10px 0;
+    }
+}
+
+
+
+/* Hover elegante para los enlaces */
+.navbar .nav-link {
+    color: var(--GTOazulMarino);
+    transition: 0.2s ease-in-out;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--GTOazulMedio);
+}
+
+/* Estados active */
+.navbar .nav-link.active {
+    color: var(--GTOazulMedio);
+    font-weight: 700;
+}
+
+
+/* Mobile-first reset */
+* {
+    box-sizing: border-box
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+body {
+    margin: 0;
+    font-family: var(--ff-sans);
+    font-size: var(--base-size);
+    color: var(--color-texto);
+    background-color: #f7f9fb;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container centrado */
+.container {
+    width: 100%;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Encabezados */
+h1,
+h2,
+h3 {
+    margin: 0 0 .5rem;
+   
+}
+
+/* Header */
+header {
+    background: var(--color-blanco);
+    border-bottom: 1px solid rgba(0, 15, 159, 0.06)
+}
+
+header .vr {
+    width: 1px;
+    background: rgba(6, 102, 255, 0.12);
+    height: 48px
+}
+
+/* Cards */
+.card {
+    background: var(--color-blanco);
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(8, 35, 67, 0.04);
+    overflow: hidden;
+    border: 1px solid rgba(6, 58, 102, 0.04);
+}
+
+.card .card-body {
+    padding: 1rem
+}
+
+/* Carousel images */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block
+}
+
+/* Botones */
+.btn-sias {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: var(--GTOazulMedio);
+    color: var(--color-blanco);
+    padding: .6rem 1rem;
+    border-radius: 8px;
+    border: 0;
+    font-weight: 600;
+}
+
+.btn-sias:hover,
+.btn-sias:focus {
+    background: var(--GTOazulMarino);
+    outline: none
+}
+
+/* Accessible focus styles */
+:focus {
+    outline: none
+}
+
+:focus-visible {
+    box-shadow: 0 0 0 var(--focus-ring) rgba(0, 102, 255, 0.18);
+    border-radius: 8px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(0, 102, 255, 0.14);
+    outline-offset: 2px;
+}
+
+/* Form styles */
+label {
+    display: block;
+    font-size: .95rem;
+    margin-bottom: .35rem
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: .6rem .75rem;
+    border: 1px solid #dfeaf8;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 1rem
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical
+}
+
+.help-text {
+    font-size: .875rem;
+    color: var(--muted)
+}
+
+/* Grid responsive */
+.grid {
+    display: grid;
+    gap: 1rem
+}
+
+@media(min-width:700px) {
+    .grid.two {
+        grid-template-columns: 1fr 360px
+    }
+}
+
+@media(min-width:992px) {
+    .container {
+        padding: 2rem
+    }
+}
+
+/* Footer */
+.site-footer {
+    padding: 1rem 0;
+    color: var(--muted);
+    font-size: .95rem;
+    border-top: 1px solid rgba(6, 102, 255, 0.06)
+}
+
+/* Utilities */
+.text-right {
+    text-align: right
+}
+
+.flex-row {
+    display: flex;
+    gap: .5rem;
+    align-items: center
+}
+
+.small {
+    font-size: .85rem
+}
+
+/* Small device adjustments */
+@media (max-width:767px) {
+    header .vr {
+        display: none
+    }
+
+    header img {
+        height: 48px
+    }
+
+    .btn-sias {
+        width: 100%;
+        justify-content: center
+    }
+}
+
+/* Print */
+@media print {
+    .no-print {
+        display: none !important
+    }
+
+    ;
+
+    body {
+        background: #fff
+    }
+}
+
+/* Tiny helpers for accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px
+}
+
+.skip-link:focus {
+    position: static;
+    left: auto;
+    top: 8px;
+    padding: .5rem;
+    background: var(--GTOazulMarino);
+    color: #fff;
+    border-radius: 6px
+}
+
+/* NAVBAR intermedio (altura equilibrada) */
+.navbar-medium {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+/* Fondo que solicitaste */
+.custom-nav {
+    background-color: #f8f9fa !important;
+}
+
+/* Ajuste fino de la marca */
+.navbar-brand {
+
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Tamaño óptimo del logo */
+.logo-navbar {
+    height: 52px;
+    width: auto;
+}
+
+/* Enlaces centrados y proporcionados */
+.nav-link {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    font-size: 1.05rem;
+}
+
+/* Todas las cards del carrusel con la misma altura */
+.campaign-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen con altura fija y recorte perfecto */
+.campaign-img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.campaign-card .img-uniforme {
+  width: 100%;
+  height: 260px;         /* altura uniforme */
+  flex: 0 0 260px;       /* evita que la imagen cambie de tamaño en flex container */
+  display: block;        /* elimina gaps inline */
+  object-fit: cover;     /* recorta sin deformar */
+  object-position: center;
+  border-radius: 12px 12px 0 0; /* si quieres que la imagen tenga los bordes redondeados en la parte superior */
+}
+
+/* Para emparejar alturas de las card-body */
+.campaign-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 240px);
+    /* resto del espacio */
+}
+
+
+
+
+/* Que todas las imágenes tengan el mismo tamaño */
+.fixed-img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Badge de estado */
+.status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #f8d7da;
+    color: #a94442;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.status-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #f8d7da;
+    color: #a94442;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.status-ba {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ecf078;
+    color: #ece829;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.status-b {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #7fefaf;
+    color: #33db98;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #dc3545;
+    border-radius: 50%;
+}
+
+.status-op {
+    width: 10px;
+    height: 10px;
+    background: #12a044;
+    border-radius: 50%;
+}
+
+/* Badge de estado */
+.status-bg {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+
+    background: #228f58;
+    color: #7fefaf;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    z-index: 10;
+}
+
+/* Ajustes para banner reducido */
+.hero-sias h2 {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.hero-sias .lead {
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.hero-sias .btn {
+    font-size: 14px;
+    padding: 0.05rem 0.1rem;
+    margin-top: 0;
+}
+
+
+
+
+    .data-field {
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e1e1e1;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+
+
+
+
+
+
+                .login-card {
+            max-width: 400px;
+            margin: 5rem auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,.1);
+        }
+    
+
+           .data-field {
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e1e1e1;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+
+
+         .data-field {
+            font-size: 1.1rem;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border: 1px solid #e1e1e1;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: .2s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 4px 15px rgba(0,0,0,.2);
+        }
+
+
+        .carousel-item .card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease-in-out;
+}
+
+.carousel-item.active .card {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+        .status-active { background:#12a044; }     /* Verde */
+        .status-process { background:#deb94b; }   /* Amarillo */
+        .status-closed { background:#f0afb4; }    /* Rojo */
+
+        .status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background:rgb(49, 208, 134);
+        }
+
+         .status-do {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background:rgb(224, 163, 163);
+        }
+         .status-d {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background:rgb(237, 239, 136);
+        }
+
+        .fixed-img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+
+        
+        
+
+
+        
+
+
+        .gallery-grid {
+    margin: 0 !important;
+}
+
+.gallery-grid .col-6 {
+    padding: 0 !important;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 260px; /* mismo alto que te agradó */
+    object-fit: cover; /* OCUPA todo el espacio, sin blancos */
+    display: block;
+}

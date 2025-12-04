@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Solicitud 2</title>
+
+     <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- ICONS -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <link rel="stylesheet" href="assets/css/styles.css" />
+   
+</head>
+
+<body style="background-color: white;">
+
+ <!-- ===== HEADER ===== -->
+<nav class="navbar navbar-expand-sm shadow-sm navbar-medium custom-nav" role="navigation" aria-label="Menú principal">
+    <div class="container-fluid">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="IMG/logoGto.png" alt="Logo SABES" class="logo-navbar">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto gap-4 fw-semibold">
+
+                <li class="nav-item">
+    <a class="nav-link" href="index.html">
+        <i class="fa-solid fa-house me-1"></i> Campañas
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="solicitud.html">
+        <i class="fa-solid fa-circle-plus me-1"></i> Solicitar
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="listado.html">
+        <i class="fa-solid fa-list me-1"></i> Ver
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link" href="login.html">
+        <i class="fa-solid fa-sign-out-alt me-1"></i> Salir
+    </a>
+</li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+
+
+<!-- FORMULARIO -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-5">
+
+            <!-- FORM -->
+            <div class="col-lg-6">
+                <div class="card p-4 shadow-sm">
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Nombre Solicitud</label>
+                        <input type="text" class="form-control" value="Apoyo a asilos">
+                    </div>
+
+                    <div class="row">
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-semibold">Inicio del periodo</label>
+        <input type="date" class="form-control" value="2025-02-05">
+    </div>
+
+    <div class="col-md-6 mb-3">
+        <label class="form-label fw-semibold">Fin del periodo</label>
+        <input type="date" class="form-control" value="2025-06-28">
+    </div>
+</div>
+
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">Contacto Responsable</label>
+                            <input type="email" class="form-control" value="maria.gomez@example.com">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label fw-semibold">Teléfono</label>
+                            <input type="text" class="form-control" value="55 9876 5432">
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold">Actividad</label>
+                        <input type="text" class="form-control" value="Apoyo a Adultos Mayores">
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Descripción de la solicitud</label>
+                        <textarea class="form-control" rows="4">En respuesta a las necesidades de los adultos mayores en asilos, estamos organizando una campaña para recolectar productos de higiene personal y cobijas. Nuestro objetivo es mejorar la calidad de vida de los residentes, proporcionando artículos esenciales que les brinden comodidad y dignidad.
+
+¿Qué tipo de donaciones se necesitan?
+
+Jabón, shampoo, pasta dental, cepillos de dientes
+Toallas, papel higiénico, pañales para adultos
+Cobijas, sábanas, almohadas
+Productos de limpieza
+
+Tu contribución hace una diferencia en la vida de quienes más lo necesitan. ¡Únete a esta causa solidaria!</textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label fw-semibold">Resultado</label>
+                        <textarea class="form-control" rows="4" placeholder="Ingrese el resultado esperado o alcanzado de la campaña"></textarea>
+                    </div>
+
+
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#validarModal">Validar</button>
+                        <button class="btn" style="background-color: #deb94b; color: white;" data-bs-toggle="modal" data-bs-target="#cerrarModal">Cerrar</button>
+                        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#eliminarModal">Eliminar</button>
+                    </div>
+       
+
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: LISTADO DE IMÁGENES -->
+            <div class="col-lg-6">
+                <div class="card p-4 shadow-sm">
+
+                    <h4 class="fw-bold mb-3">Imágenes Asociadas</h4>
+
+                    <!-- LISTADO DE IMAGENES -->
+                    <div class="row g-3 mb-4">
+
+                        <!-- Imagen 1 -->
+                        <div class="col-md-6">
+                            <div class="border rounded p-2 text-center">
+                                <img src="assets/img/img1.jpg" class="img-fluid rounded mb-2" style="height:150px; object-fit:cover;">
+                                <button type="button" class="btn btn-danger btn-sm w-100" data-bs-toggle="modal" data-bs-target="#eliminarImagenModal">Eliminar</button>
+                            </div>
+                        </div>
+
+                        <!-- Imagen 2 -->
+                        <div class="col-md-6">
+                            <div class="border rounded p-2 text-center">
+                                <img src="assets/img/img2.jpg" class="img-fluid rounded mb-2" style="height:150px; object-fit:cover;">
+                                <button type="button" class="btn btn-danger btn-sm w-100" data-bs-toggle="modal" data-bs-target="#eliminarImagenModal">Eliminar</button>
+                            </div>
+                        </div>
+
+                        <!-- Imagen 3 -->
+                        <div class="col-md-6">
+                            <div class="border rounded p-2 text-center">
+                                <img src="assets/img/img3.jpg" class="img-fluid rounded mb-2" style="height:150px; object-fit:cover;">
+                                <button type="button" class="btn btn-danger btn-sm w-100" data-bs-toggle="modal" data-bs-target="#eliminarImagenModal">Eliminar</button>
+                            </div>
+                        </div>
+
+                        <!-- Imagen 4 -->
+                        <div class="col-md-6">
+                            <div class="border rounded p-2 text-center">
+                                <img src="assets/img/img4.jpg" class="img-fluid rounded mb-2" style="height:150px; object-fit:cover;">
+                                <button type="button" class="btn btn-danger btn-sm w-100" data-bs-toggle="modal" data-bs-target="#eliminarImagenModal">Eliminar</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- AGREGAR NUEVA IMAGEN -->
+                    <h5 class="fw-semibold">Agregar nueva imagen</h5>
+
+                    <div class="input-group mt-2">
+                        <input type="file" class="form-control" accept="image/*">
+                        <button class="btn btn-success">Subir</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER MODERNO ===== -->
+<footer class="text-white mt-5" style="background-color: #1E588C;">
+    <div class="container py-4">
+
+        <div class="row align-items-center">
+
+            <!-- Logo o Nombre -->
+            <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                <h5 class="fw-bold m-0">SABES</h5>
+                <p class="m-0" style="font-size: 14px;">Sistema Institucional de Apoyo Social</p>
+            </div>
+
+            <!-- Redes Sociales -->
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                
+            </div>
+
+               <!-- Links -->
+            <div class="col-md-4 text-center text-md-end">
+               <a href="https://www.facebook.com/SABESGUANAJUATO/" class="text-white mx-2 fs-4"><i class="bi bi-facebook"></i></a>
+                <a href="https://x.com/sabes_gto" class="text-white mx-2 fs-4"><i class="bi bi-twitter-x"></i></a>
+                <a href="https://www.instagram.com/sabes.gto/#" class="text-white mx-2 fs-4"><i class="bi bi-instagram"></i></a>
+                <a href="https://www.youtube.com/user/PortalSABES" class="text-white mx-2 fs-4"><i class="bi bi-youtube"></i></a>
+            </div>
+
+        </div>
+
+        <hr class="border-light my-3">
+
+        <div class="text-center" style="font-size: 14px;">
+            &copy; 2025 SABES — Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+
+
+<!-- Modal Validar -->
+<div class="modal fade" id="validarModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+             <div class="modal-header">
+                <h5 class="modal-title">Validada</h5>
+            </div>
+            <div class="modal-body">
+                La solicitud fue validada correctamente
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Cerrar -->
+<div class="modal fade" id="cerrarModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmar acción</h5>
+            </div>
+            <div class="modal-body">
+                ¿Desea cerrar la solicitud?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminar -->
+<div class="modal fade" id="eliminarModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirmar acción</h5>
+            </div>
+            <div class="modal-body">
+                ¿Desea eliminar la solicitud?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger">Confirmar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Eliminar Imagen -->
+<div class="modal fade" id="eliminarImagenModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                ¿Quieres eliminar la imagen?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

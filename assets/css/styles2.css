@@ -1,0 +1,172 @@
+:root{
+  --navy: #052A6B;
+  --royal: #0D4EA8;
+  --cyan: #33A3E0;
+  --light-bg: #F6F9FC;
+  --accent: #FFC72C;
+  --muted: #6C7A89;
+}
+
+/* Base */
+body {
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: var(--light-bg);
+  color: #222;
+}
+
+/* Marca */
+.navbar-brand { font-weight:700; color:var(--navy); }
+
+.brand-mark {
+  width:36px;
+  height:36px;
+  border-radius:6px;
+  background: linear-gradient(135deg,var(--royal),var(--cyan));
+  box-shadow: 0 3px 10px rgba(13,78,168,0.12);
+}
+
+/* Cards */
+.card {
+  border-radius:10px;
+}
+
+/* ================================
+   PLACEHOLDERS (UNIFICADOS)
+================================ */
+.image-placeholder {
+  width: 100%;
+  min-height: 130px;
+  background: #e9eef5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.image-placeholder-lg {
+  width: 100%;
+  min-height: 180px;
+  background: #e9eef5;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ================================
+   Botones
+================================ */
+.btn-primary {
+  background: linear-gradient(90deg,var(--royal),var(--cyan));
+  border: none;
+  box-shadow: 0 4px 14px rgba(13,78,168,0.12);
+  border-radius:8px;
+}
+
+.btn-outline-primary {
+  border-radius:8px;
+  border-width:1px;
+  border-color:var(--royal);
+  color:var(--royal);
+}
+
+/* Títulos */
+h1,h2,h3,h4,h5{
+  color:var(--navy);
+  font-weight:600;
+}
+
+/* Helpers */
+.text-muted{ color:var(--muted) !important; }
+.small{ font-size:0.85rem; }
+
+/* ================================
+   HERO & SIDE IMAGE
+================================ */
+.hero-img-placeholder,
+.side-img-placeholder {
+    width: 100%;
+    height: 260px;
+    border-radius: 14px;
+    background: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #4b4b4b;
+}
+
+
+/* ================================
+   RESPONSIVE — MÓVIL
+================================ */
+@media (max-width: 768px) {
+
+  /* Reducir tamaño de títulos */
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+
+  /* Carrusel: elementos a una columna */
+  .carousel .card {
+    padding: 1.2rem !important;
+  }
+
+  /* Ajustar imágenes en móvil */
+  .image-placeholder {
+    min-height: 110px;
+  }
+
+  .image-placeholder-lg {
+    min-height: 150px;
+  }
+
+  /* Carrusel navegación móvil más visible */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+      filter: brightness(0) invert(1);
+  }
+
+  /* Cards más compactas */
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+  }
+}
+
+/* ================================
+   Móvil pequeño (<= 576px)
+================================ */
+@media (max-width: 576px){
+  .image-placeholder { min-height:100px; }
+  .image-placeholder-lg { min-height:130px; }
+
+  .hero-img-placeholder,
+  .side-img-placeholder {
+    height: 180px;
+  }
+
+  /* Columnas del carrusel a stack */
+  .carousel-item .row {
+    flex-direction: column;
+  }
+
+  .carousel-item .col-md-4,
+  .carousel-item .col-md-8 {
+    width: 100%;
+  }
+
+  /* Reducir padding general */
+  section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
